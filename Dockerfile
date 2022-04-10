@@ -6,6 +6,3 @@ COPY cert.crt /etc/nginx/conf.d/cert.crt
 COPY cert.key /etc/nginx/conf.d/cert.key
 
 CMD ["nginx", "-g", "daemon off;"]
-
-RUN sudo usermod -aG docker jenkins
-RUN sudo chmod 777 /var/run/docker.sock
