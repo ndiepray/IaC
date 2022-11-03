@@ -18,7 +18,7 @@ pipeline {
       steps {
         sh '''
         kubectl create deployment pl-bulk-prod --image=greenstatic/echo-ip:1.1.0
-        kubectl expose deployment pl-bulk-prod --type=LoadBalancer --port=8081 \
+        kubectl expose deployment pl-bulk-prod --type=LoadBalancer --port=8080 \
                                                --target-port=80 --name=pl-bulk-prod-svc
         '''
       }
